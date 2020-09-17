@@ -1,19 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author nelson
- */
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
+
 public class Ultimate extends javax.swing.JFrame {
 
     /**
      * Creates new form Ultimate
      */
     public Ultimate() {
+        this.getContentPane().setBackground(Color.cyan);
         
         initComponents();
     }
@@ -45,10 +41,13 @@ public class Ultimate extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GUI");
         setLocation(new java.awt.Point(500, 250));
+        setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
 
+        jLabel1.setFont(new java.awt.Font("Fira Code", 1, 14)); // NOI18N
         jLabel1.setText("Dozens");
 
+        jLabel2.setFont(new java.awt.Font("Fira Code", 1, 14)); // NOI18N
         jLabel2.setText("Price");
 
         t2.setEditable(false);
@@ -58,14 +57,18 @@ public class Ultimate extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Fira Code", 1, 14)); // NOI18N
         jLabel3.setText("Discount");
 
+        jLabel4.setFont(new java.awt.Font("Fira Code", 1, 14)); // NOI18N
         jLabel4.setText("To Pay");
 
         t3.setEditable(false);
 
         t4.setEditable(false);
 
+        jButton1.setBackground(new java.awt.Color(102, 102, 102));
+        jButton1.setFont(new java.awt.Font("Fira Code", 1, 12)); // NOI18N
         jButton1.setText("RESULT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +76,7 @@ public class Ultimate extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Fira Code", 1, 12)); // NOI18N
         jLabel5.setText("Unit Gifts");
 
         t5.setEditable(false);
@@ -82,6 +86,8 @@ public class Ultimate extends javax.swing.JFrame {
             }
         });
 
+        cb1.setBackground(new java.awt.Color(153, 153, 153));
+        cb1.setFont(new java.awt.Font("Fira Code", 1, 14)); // NOI18N
         cb1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Amount", "Discount", "To Pay", "Unit gifts" }));
         cb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +95,7 @@ public class Ultimate extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Fira Code", 1, 14)); // NOI18N
         jLabel6.setText("Total to Pay");
 
         t6.setEditable(false);
@@ -107,30 +114,31 @@ public class Ultimate extends javax.swing.JFrame {
                             .addComponent(t1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel4))
+                                .addComponent(jLabel4)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
-                                .addComponent(t2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(t2)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(t3, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                            .addComponent(t5))
+                        .addComponent(cb1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(t3, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                                .addComponent(t5))
+                            .addComponent(jLabel5))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
                             .addComponent(t6)
-                            .addComponent(t4)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(cb1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(jButton1)))
+                            .addComponent(t4))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -164,7 +172,7 @@ public class Ultimate extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -182,7 +190,8 @@ public class Ultimate extends javax.swing.JFrame {
        
        nautilus.setUnitsRider(Integer.parseInt(t1.getText()));
        
-       t2.setText("139");
+      // if(nautilus.setUnitsRider(t1.getText()) == null)
+       t2.setText("139 USD");
        switch(cb1.getSelectedIndex()){
            
             case 0: 
@@ -218,11 +227,6 @@ public class Ultimate extends javax.swing.JFrame {
                  
         }
        
-      
-   
-      
-       
-      
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -264,6 +268,9 @@ public class Ultimate extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                JOptionPane.showMessageDialog(null, "Please enter the number of dozens and "+"\n"
+                                              +"choose an option from de combobox"+"\n"
+                                              +"The value of a Personal Rider License is 139US ");
                 new Ultimate().setVisible(true);
                 
             }
