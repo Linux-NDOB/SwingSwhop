@@ -1,5 +1,5 @@
 
-import static javax.swing.UIManager.get;
+
 
 //The program is about Personal Rider Licenses , 139 USD.
 public class Okular {
@@ -27,7 +27,7 @@ public class Okular {
     }
 
     public float getUnitsRider() {
-        return unitsRider;
+        return  unitsRider;
     }
 
     public void setUnitsRider(float unitsRider) {
@@ -35,7 +35,7 @@ public class Okular {
     }
 
     public float getValueRider() {
-        return valueRider;
+        return  valueRider;
     }
 
     public void setValueRider(float valueRider) {
